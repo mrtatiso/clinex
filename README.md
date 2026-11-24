@@ -40,6 +40,17 @@ Sorted by kind (`l`, then `s`, then `p`), then the most used first:
 
 Nothing useful is thrown away: a piece that does not pass is cut, not dropped.
 
+## Published table
+
+This repository includes `clean.tecy`, made by clinex v1.0.0 from the `scrap.tecy` published in [tecy](https://github.com/mrtatiso/tecy). Anyone can check it: the same scrap always gives the same clean.
+
+| file | sha256 |
+|---|---|
+| `scrap.tecy` (tecy, commit `860f866`) | `204265e682fe006f25969344f02a53ea77ead809b40ecb234929de4fbc4d3ca7` |
+| `clean.tecy` | `a2593fa55ce78bdea018fdf3b261d44b8131f35eda059bf063db3ab087ad2341` |
+
+When `scrap.tecy` grows, `clean.tecy` is made again and both hashes here change with it. Tools that read `clean.tecy` should check its sha256.
+
 ## What it does
 
 **Letters.** a–z and á é í ó ú ü ñ stay. Other Latin letters become their plain form: ç → c, ö → o, à → a, ß → ss, æ → ae, œ → oe, ø → o, ł → l, þ → th. A letter with no plain form is dropped and splits the piece there.
